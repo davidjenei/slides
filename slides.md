@@ -58,7 +58,7 @@ left
 ::::
 
 :::: column
-![picture of spaghetti](./leaves.jpg)
+![picture of spaghetti](./leaves.jpg){height=50%}
 ::::
 
 :::
