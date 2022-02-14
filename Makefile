@@ -6,6 +6,7 @@ RM=/bin/rm
 
 PANDOC_OPTIONS= \
 	-t beamer
+#	--slide-level=2
 
 slides.pdf : slides.md beamerthememinimal.sty
 	$(PANDOC) $(PANDOC_OPTIONS) $< -o $@
