@@ -11,7 +11,7 @@ slides.pdf : slides.md beamerthememinimal.sty
 	$(PANDOC) $(PANDOC_OPTIONS) $< -o $@
 
 watch :
-	$(WATCHMAN) -p slides.md -t $(DOCS)
+	$(WATCHMAN) -p slides.md beamerthememinimal.sty -t $(DOCS)
 
 .PHONY: all clean
 
