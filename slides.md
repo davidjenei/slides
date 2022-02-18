@@ -1,40 +1,43 @@
 ---
-title: Hello world!
-author: Various authors
+title: Presentation title
+subtitle: Presentation subtitle
+author: David Jenei
 theme: minimal
 date: March 22, 2020
 aspectratio: 169
 ---
 
-# In the morning
+# Slide title
 
-## Getting up
+## Bullet title
 
-- Turn off alarm
-- Get out of bed
+- Bullet text
 
-## Breakfast
+## Bullet title #2
 
-- Eat eggs
-- Drink coffee
+- Another bullet text
 
-# In the evening
+# Slide title
 
-## Dinner
+::: columns
+:::: {.column width=50%}
+## Bullet title
+- Bullet text
+::::
+:::: column
+![picture of spaghetti](./leaves.jpg){height=50%}
+::::
+:::
 
-- Eat spaghetti
-- Drink wine
+#
 
-------------------
+- Slide bullet text
 
-![picture of spaghetti](./leaves.jpg)
+#
+\center
+![picture of spaghetti](./avocado.jpg){height=100%}\
 
-## Going to sleep
-
-- Get in bed
-- Count sheep
-
-# Slide 1 title
+# Slide title
 
 Some super quickly created demo slides
 
@@ -45,22 +48,43 @@ Some super quickly created demo slides
     * Some HTML (e.g. \<center\>)
     * When using pandoc beamer, can use latex commands (e.g. \\center, \\large, etc)\dots
 
-# Slide 2 title
+# Some code
 
-\center The slide syntax is so simple that you can quickly create a handful of slides on basically any device in any editor. E.g. on your mobile on the way to the meeting where you need the slides. Right before the meeting starts you use pandoc to create the actual slides from your source.
+```python
+def foo():
+    a = 10
+    return 1
 
-# This slide has columns
+cars = ['ford', 'mercedes', 'bmw']
+cars.reverse()
 
+cars.count(cars)
+```
+
+#
+\center \huge Statement
+
+#
+\huge "Notable quote"
+
+\large Fact information
+
+#
+\center \huge
+**100%**
+
+\large Fact information
+
+#
 ::: columns
-
-:::: column
-left
+:::: {.column width=60%}
+![picture of spaghetti](./leaves.jpg){height=100%}
 ::::
-
 :::: column
-![picture of spaghetti](./leaves.jpg){height=50%}
+![picture of spaghetti](./avocado.jpg){height=40%}
+![picture of spaghetti](./leaves.jpg){height=60%}
 ::::
-
 :::
+
 
 
