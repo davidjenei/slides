@@ -33,9 +33,8 @@ aspectratio: 169
 
 - Slide bullet text
 
-#
-\center
-![picture of spaghetti](./avocado.jpg){height=100%}\
+# {.plain}
+\includegraphics[height=\paperwidth]{./avocado.jpg}
 
 # Slide title
 
