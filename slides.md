@@ -81,21 +81,24 @@ cars.count(cars)
 \large Fact information
 
 #
-\center \huge
+
+\centering
+\huge
 **100%**
 
 \large Fact information
 
 #
-::: columns
-:::: {.column width=60%}
-![picture of spaghetti](./leaves.jpg){height=100%}
-::::
-:::: column
-![picture of spaghetti](./avocado.jpg){height=40%}
-![picture of spaghetti](./leaves.jpg){height=60%}
-::::
+
+:::::::::::::: {.columns}
+::: {.column width="70%"}
+![](./avocado.jpg){width=100%}
 :::
+::: {.column width="30%" align=center}
+![](./avocado.jpg){height=40%}
 
+\hfill
 
-
+![](./avocado.jpg){height=40%}
+:::
+::::::::::::::
