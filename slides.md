@@ -33,9 +33,6 @@ aspectratio: 169
 
 - Slide bullet text
 
-# {.plain}
-\includegraphics[height=\paperwidth]{./avocado.jpg}
-=======
 # Full slide image
 
 To create a full size image, use `\fullslideimage{image.jpg}`
