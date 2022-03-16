@@ -7,7 +7,8 @@ WATCHMAN=/usr/bin/watchman-make
 RM=/bin/rm
 
 PANDOC_OPTIONS= \
-	-t beamer
+	-t beamer \
+	--include-in-header=texheader.tex
 #	--slide-level=2
 
 slides.pdf : slides.md $(THEME) diagram.eps

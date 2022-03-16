@@ -35,6 +35,21 @@ aspectratio: 169
 
 # {.plain}
 \includegraphics[height=\paperwidth]{./avocado.jpg}
+=======
+# Full slide image
+
+To create a full size image, use `\fullslideimage{image.jpg}`
+
+- This custom LaTeX command is defined in `texheader.tex` which we pass to Pandoc with the `--include-in-header` option.
+
+- An image with 16:9 aspect ratio is required! To crop an image with ImageMagick, use:
+```bash
+convert in.jpg -gravity center -crop 16:9 out.jpg
+```
+
+#
+
+\fullslideimage{./avocado169.jpg}
 
 # Slide title
 
