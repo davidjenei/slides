@@ -47,7 +47,7 @@ To create a full size image, use `\fullslideimage{image.jpg}`
 convert in.jpg -gravity center -crop 16:9 out.jpg
 ```
 
-#
+# {.plain}
 
 \fullslideimage{./avocado169.jpg}
 
