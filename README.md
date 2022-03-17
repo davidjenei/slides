@@ -1,3 +1,9 @@
+# Requirements
+
+    sudo apt-get install --no-install-recommends texlive-latex-base \
+              texlive-latex-recommended texlive-pictures pandoc make \
+              python3-pywatchman
+
 # Useful links
 
 * [Unsplash](https://unsplash.com/)
