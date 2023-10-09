@@ -7,33 +7,48 @@ date: March 22, 2020
 aspectratio: 169
 ---
 
-# Slide title
+Simple layout with text only
+================================================================================
 
-## Bullet title
+Unordered list:
+--------------
 
 - Bullet text
 
-## Bullet title #2
+Ordered list:
+-------------
 
-- Another bullet text
+1. Collect underpants
+2. ???
+3. Profit!
 
-# Slide title
+
+> TODO: Fix these weird numbers
+
+Two column layout
+================================================================================
 
 ::: columns
 :::: {.column width=50%}
-## Bullet title
+
+This column takes up half the space:
+
 - Bullet text
+
 ::::
+
 :::: column
-![picture of spaghetti](./leaves.jpg){height=50%}
+![the other half can be an image](./leaves.jpg){height=50%}
 ::::
 :::
 
-#
+{}
+================================================================================
 
-- Slide bullet text
+- This is a slide without title.
 
-# Full slide image
+Full slide image
+================================================================================
 
 To create a full size image, use `\fullslideimage{image.jpg}`
 
@@ -44,22 +59,13 @@ To create a full size image, use `\fullslideimage{image.jpg}`
 convert in.jpg -gravity center -crop 16:9 out.jpg
 ```
 
-# {.plain}
+{.plain}
+================================================================================
 
 \fullslideimage{./avocado169.jpg}
 
-# Slide title
-
-Some super quickly created demo slides
-
-* Do not need anything else than markdown
-    * Slides title starts with # (also starts a new slide)
-    * Bullet points, newlines, empty lines: all standard markdown
-* However, can also use other stuff, e.g.:
-    * Some HTML (e.g. \<center\>)
-    * When using pandoc beamer, can use latex commands (e.g. \\center, \\large, etc)\dots
-
-# Some code
+Some code
+================================================================================
 
 ```python
 def foo():
@@ -72,25 +78,34 @@ cars.reverse()
 cars.count(cars)
 ```
 
-#
+{}
+================================================================================
+
 \center \huge Statement
 
-#
+{}
+================================================================================
+
 \huge "Notable quote"
 
-\large Fact information
+\large This slide looks good without a title
 
-#
+{}
+================================================================================
 
 \centering
 \huge
+
 **100%**
 
-\large Fact information
+\large
 
-#
+Fact information
 
-:::::::::::::: {.columns}
+Multiple pictures
+================================================================================
+
+:::::::::::::: {.columns align=center}
 ::: {.column width="70%"}
 ![](./avocado.jpg){width=100%}
 :::

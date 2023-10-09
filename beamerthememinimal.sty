@@ -1,15 +1,20 @@
-\usefonttheme{professionalfonts}
+%\usefonttheme{professionalfonts}
+\usepackage{helvet}
 \useinnertheme{rounded}
 \beamertemplatenavigationsymbolsempty{}
 \setbeamertemplate{items}[circle]
 \setbeamercolor{structure}{fg=black,bg=white}
 
+\usepackage{xcolor}
+\definecolor{customcolor}{HTML}{bddbbd}
+
 \setbeamercolor{background canvas}{parent=structure}
 \setbeamercolor{background}{parent=background canvas}
 
+
 \setbeamercolor{palette primary}{bg=black,fg=white}
-\setbeamercolor{palette secondary}{bg=black,fg=white}
-\setbeamercolor{palette tertiary}{bg=black,fg=white}
+\setbeamercolor{palette secondary}{bg=customcolor,fg=white}
+\setbeamercolor{palette tertiary}{bg=customcolor,fg=white}
 \setbeamercolor{palette quaternary}{bg=black,fg=white}
 
 \setbeamercolor{local structure}{parent=palette sidebar primary}
@@ -64,7 +69,7 @@
 \mode<presentation>
 \setbeamercolor*{author in head/foot}{parent=palette tertiary}
 \setbeamercolor*{title in head/foot}{parent=palette secondary}
-\setbeamercolor*{date in head/foot}{parent=palette primary}
+\setbeamercolor*{date in head/foot}{parent=palette secondary}
 
 \setbeamercolor*{section in head/foot}{parent=palette tertiary}
 \setbeamercolor*{subsection in head/foot}{parent=palette secondary}
@@ -74,7 +79,8 @@
 	\leavevmode%
 	\hbox{%
 		\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-			%\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}%
+			\fontsize{4}{5}\selectfont % Adjust the first argument (4) for the font size
+			\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}%
 		\end{beamercolorbox}%
  	}
 }
