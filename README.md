@@ -4,9 +4,20 @@
               texlive-latex-recommended texlive-pictures pandoc make \
               python3-pywatchman
 
-# Update!!!
+# Try lua filters with fenced divs?
 
-Hellooo world! 3xxx
+```
+function Div(el)
+  if el.classes:includes("centered") then
+    return pandoc.RawBlock('latex', '\\begin{center}') .. el.content .. pandoc.RawBlock('latex', '\\end{center}')
+  end
+end
+```
+
+```
+pandoc yourfile.md --lua-filter=center-div.lua -o output.pdf
+```
+
 
 # Useful links
 

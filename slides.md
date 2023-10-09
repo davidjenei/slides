@@ -50,7 +50,7 @@ This column takes up half the space:
 Two column layout
 =================
 
-:::::::::::: columns
+:::::::::::: {.columns}
 ::: {.column width=50%}
 
 This column takes up half the space:
@@ -59,8 +59,10 @@ This column takes up half the space:
 
 :::
 
-::: column
+::: {.column}
+
 ![the other half can be an image](./leaves.jpg){height=50%}
+
 :::
 ::::::::::::
 
@@ -106,7 +108,7 @@ cars.count(cars)
 {}
 =======================
 
-\center \huge Statement
+\centering \huge Statement
 
 {}
 =======================
