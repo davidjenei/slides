@@ -1,29 +1,35 @@
-DOCS=slides.pdf
+PDF=slides.pdf
+MD=slides.md
 THEME=beamerthememinimal.sty
 
 PANDOC=/usr/bin/pandoc
 DIA=/usr/bin/dia
 WATCHMAN=/usr/bin/watchman-make
-RM=/bin/rm
 
 PANDOC_OPTIONS= \
 	-t beamer \
 	--include-in-header=texheader.tex
 #	--slide-level=2
 
-slides.pdf : slides.md $(THEME) diagram.eps
+$(PDF): $(MD) $(THEME) diagram.eps
 	$(PANDOC) $(PANDOC_OPTIONS) $< -o $@
 
-diagram.eps : diagram.dia
+diagram.eps : diagrams/example.dia
 	$(DIA) -e $@ -t eps $<
 
+.PHONY: watch
 watch :
-	$(WATCHMAN) -p slides.md $(THEME) -t $(DOCS)
+	$(WATCHMAN) -p $(MD) $(THEME) -t $(DOCS)
 
-.PHONY: all clean
+.PHONY: all
+all : $(PDF)
 
-all : $(DOCS)
-
+.PHONY: clean
 clean:
-	- $(RM) $(DOCS)
+	- $(RM) $(PDF)
+
+.PHONY: install
+install: all
+	rsync -avzh ${PDF} davidjenei.com:~/static/shared
+
 

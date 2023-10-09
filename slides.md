@@ -22,9 +22,6 @@ Ordered list:
 2. ???
 3. Profit!
 
-
-> TODO: Fix these weird numbers
-
 Fenced divs
 ==========
 
@@ -61,7 +58,7 @@ This column takes up half the space:
 
 ::: {.column}
 
-![the other half can be an image](./leaves.jpg){height=50%}
+![the other half can be an image](./images/leaves.jpg){height=50%}
 
 :::
 ::::::::::::
@@ -89,7 +86,7 @@ convert in.jpg -gravity center -crop 16:9 out.jpg
 {.plain}
 ==================
 
-\fullslideimage{./avocado169.jpg}
+\fullslideimage{./images/avocado169.jpg}
 
 Some code
 =========
@@ -134,13 +131,13 @@ Multiple pictures
 
 :::::::::::::: {.columns align=center}
 ::: {.column width="70%"}
-![](./avocado.jpg){width=100%}
+![](./images/avocado.jpg){width=100%}
 :::
 ::: {.column width="30%" align=center}
-![](./avocado.jpg){height=40%}
+![](./images/avocado.jpg){height=40%}
 
 \hfill
 
-![](./avocado.jpg){height=40%}
+![](./images/avocado.jpg){height=40%}
 :::
 ::::::::::::::
