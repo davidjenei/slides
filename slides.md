@@ -8,7 +8,7 @@ aspectratio: 169
 ---
 
 Simple layout with text only
-================================================================================
+============================
 
 Unordered list:
 --------------
@@ -25,9 +25,13 @@ Ordered list:
 
 > TODO: Fix these weird numbers
 
-Two column layout
-================================================================================
+Fenced divs
+==========
 
+In pandoc, a Div starts with a fence containing at least three consecutive colons plus some
+attributes.
+
+```
 ::: columns
 :::: {.column width=50%}
 
@@ -41,31 +45,52 @@ This column takes up half the space:
 ![the other half can be an image](./leaves.jpg){height=50%}
 ::::
 :::
+```
+
+Two column layout
+=================
+
+:::::::::::: columns
+::: {.column width=50%}
+
+This column takes up half the space:
+
+- Bullet text
+
+:::
+
+::: column
+![the other half can be an image](./leaves.jpg){height=50%}
+:::
+::::::::::::
 
 {}
-================================================================================
+==================
 
 - This is a slide without title.
 
 Full slide image
-================================================================================
+=================
 
 To create a full size image, use `\fullslideimage{image.jpg}`
 
-- This custom LaTeX command is defined in `texheader.tex` which we pass to Pandoc with the `--include-in-header` option.
+- This custom LaTeX command is defined in `texheader.tex` which we pass to
+Pandoc with the `--include-in-header` option.
 
-- An image with 16:9 aspect ratio is required! To crop an image with ImageMagick, use:
+- An image with 16:9 aspect ratio is required! To crop an image with ImageMagick
+, use:
+
 ```bash
 convert in.jpg -gravity center -crop 16:9 out.jpg
 ```
 
 {.plain}
-================================================================================
+==================
 
 \fullslideimage{./avocado169.jpg}
 
 Some code
-================================================================================
+=========
 
 ```python
 def foo():
@@ -79,19 +104,19 @@ cars.count(cars)
 ```
 
 {}
-================================================================================
+=======================
 
 \center \huge Statement
 
 {}
-================================================================================
+=======================
 
 \huge "Notable quote"
 
 \large This slide looks good without a title
 
 {}
-================================================================================
+=======================
 
 \centering
 \huge
@@ -103,7 +128,7 @@ cars.count(cars)
 Fact information
 
 Multiple pictures
-================================================================================
+=================
 
 :::::::::::::: {.columns align=center}
 ::: {.column width="70%"}
